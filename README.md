@@ -1,0 +1,7 @@
+# Using Natural Language Processing Techniques to Analyze the Voynich Manuscript.
+
+The Voynich manuscript is an incredibly mysterious historical document found sometime around the 1400s in Europe. It contains writing from a language never seen before, and there have been attempts to decode from scholars across many disciplines. This project features some of my early attempts to take a crack at it, trying to take advantage of the new NLP developments made regarding transformers.
+
+Researchers have processed the original text to an extremely accessible data format: a linear string of characters that correspond to each of the unique characters written on the original document. This makes it incredibly well-suited for sequence-based deep learning analysis tools -- things like LSTMs and Transformers. However, the total dataset is only around ~40,000 total characters, which may not be enough to decode it this way.
+
+As of now, this repository just has some preliminary analysis of looking at the vector embeddings of the characters in latent space. However, I may add some other techniques that I'm trying in the near future. My plan would be to do integrate a bilingual transformer-based embedding model to embed word across like 6 different language. Then, we can see if there any universal patterns in what embeddings look like for certain concepts. If we were able to do this, we could find the cosine similarity (or some non-linear method of comparison) between the Voynich words and the embeddings of other languages in order to decode it.  
